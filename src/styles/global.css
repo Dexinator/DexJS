@@ -4,7 +4,7 @@
 
 @layer components {
   html {
-    font-family: system-ui, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.125rem;
   }
 
@@ -12,13 +12,10 @@
     @apply text-[100px] text-center text-transparent bg-clip-text transition-all ease-in-out duration-700;
     background-image: linear-gradient(
       to right,
-      theme("colors.slate.950"),
-      theme("colors.slate.950") 33%,
-      theme("colors.red.500") 66%,
-      theme("colors.yellow.500"),
-      theme("colors.green.500"),
-      theme("colors.blue.500"),
-      theme("colors.purple.500")
+      theme("colors.orange.100"),
+      theme("colors.orange.300") 33%,
+      #FFA14A 66%,  /* Naranja intermedio para suavizar */
+      #FF8F3F 100%   /* Color final más cálido */
     );
     background-size: 300% 100%;
     background-position: top left 100%;
@@ -29,7 +26,7 @@
       background-position: top left;
     }
     .hover-grad-text:hover {
-      background-position: top left 100%;
+      background-position: top left 100%; /* Mueve el gradiente hasta #FF8F3F */
     }
   }
 
