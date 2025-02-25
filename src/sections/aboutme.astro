@@ -1,36 +1,56 @@
+---
+import IconArrow from "../icons/arrow.astro";
+import IconCursor from "../icons/cursor.astro";
+---
+
+
+<!-- Tarjeta grande (pantallas grandes) -->
 <!-- Tarjeta grande (pantallas grandes) -->
 <section 
-  id="about"
-  aria-label="About me"
-  class="group col-span-2 hidden lg:flex h-40 w-full rotate-0 sm:-rotate-2 flex-col rounded-3xl border-4 border-white bg-sky-50 sm:bg-stone-100 p-4 transition-all sm:hover:rotate-0 sm:hover:bg-sky-50"
+id="about"
+aria-label="About me"
+class="group col-span-2 hidden lg:flex h-40 w-full rotate-0 sm:-rotate-2 flex-col rounded-3xl border-4 border-white bg-sky-50 sm:bg-stone-100 p-4 transition-all sm:hover:rotate-0 sm:hover:bg-sky-50"
 >
-  <div class="flex lg:items-start gap-4 flex-row items-center text-center">
-    <img
-      class="aspect-square size-10 rounded-full grayscale-0 scale-110 sm:grayscale sm:scale-100 transition-all sm:group-hover:scale-110 sm:group-hover:grayscale-0"
-      src="/images/avatar.webp"
-      alt="avatar"
-    />
-    <div class="flex flex-col items-start">
-      <p class="font-roboto-condensed font-semibold text-sky-600 sm:text-inherit sm:group-hover:text-sky-600">
-        Andriy Kuktenko
-      </p>
-      <p class="font-roboto-condensed font-medium text-sky-600 sm:text-inherit sm:group-hover:text-sky-600">
-        Full Stack Engineer
-      </p>
-    </div>
+<div class="flex lg:items-start gap-4 flex-row items-center text-center">
+  <img
+  class="aspect-square size-10 rounded-full grayscale-0 scale-110 sm:grayscale sm:scale-100 transition-all sm:group-hover:scale-110 sm:group-hover:grayscale-0"
+  src="/images/avatar.webp"
+  alt="avatar"
+  />
+  <div class="flex flex-col items-start">
+    <p class="font-roboto-condensed font-semibold text-sky-600 sm:text-inherit sm:group-hover:text-sky-600">
+      Andriy Kuktenko
+    </p>
+    <p class="font-roboto-condensed font-medium text-sky-600 sm:text-inherit sm:group-hover:text-sky-600">
+      Full Stack Engineer
+    </p>
   </div>
-  <p class="font-roboto-condensed font-thin text-sm max-w-72 text-sky-600 sm:text-inherit sm:group-hover:text-sky-600">
-    I primarily focus on TypeScript-based full-stack projects (Node.js,
-    React, React Native) and cloud platforms (AWS, DigitalOcean, Vercel,
-    Firebase, etc.), serving as a Full Stack Engineer.
-  </p>
+</div>
+<p class="font-roboto-condensed font-thin text-sm max-w-72 text-sky-600 sm:text-inherit sm:group-hover:text-sky-600">
+  I primarily focus on TypeScript-based full-stack projects (Node.js,
+  React, React Native) and cloud platforms (AWS, DigitalOcean, Vercel,
+  Firebase, etc.), serving as a Full Stack Engineer.
+</p>
 </section>
 
-<!-- Tarjeta pequeña (pantallas pequeñas) -->
-<div 
-  class="group overflow-hidden flex flex-col justify-center items-center h-40 w-36 rounded-3xl border-4 border-white bg-rose-50 sm:bg-stone-100 p-4 transition-all sm:hover:rotate-0 sm:hover:bg-rose-50 lg:hidden"
->
-  <p class="font-roboto-condensed font-semibold sm:text-inherit text-3xl">
-    Sobre mí
-  </p>
+<!-- Tarjeta interactiva (pantallas pequeñas) -->
+<div class="drawer-content lg:hidden col-span-2 sm:col-span-1">
+  <label
+  for="experience-drawer"
+  class="group relative sm:cursor-none overflow-hidden py-4 px-0 flex h-40 w-36 flex-col gap-2 rounded-3xl border-4 border-white transition-all bg-blue-100 rotate-0 sm:-rotate-2 sm:hover:rotate-0 sm:bg-stone-100 sm:hover:bg-blue-100 items-center justify-center text-center"
+  data-umami-event="Show my work click"
+  id="experience"
+  >
+  <img
+  class="aspect-square z-10 size-10 rounded-full transition-all grayscale-0 scale-110 sm:scale-100 sm:grayscale sm:group-hover:scale-110 sm:group-hover:grayscale-0"
+  src="/images/gmail.webp"
+  alt="redvike"
+  />
+  <span
+  class="flex sm:cursor-none gap-3 items-center justify-center text-3xl font-bold font-serif italic sm:not-italic sm:group-hover:italic text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500 rounded-lg transition-all duration-100"
+  >
+  Este es el texto
+</span>
+<IconCursor />
+</label>
 </div>
