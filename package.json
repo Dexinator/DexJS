@@ -17,12 +17,13 @@
     "astro": "^4.15.1",
     "gsap": "^3.12.5",
     "tailwindcss": "^3.4.10",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "webpack-4-boilerplate": "github:PavelLaptev/context-cursor"
   },
   "devDependencies": {
     "daisyui": "^4.12.10",
-    "tailwind-scrollbar": "^3.1.0",
     "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier-plugin-astro": "^0.14.1",
+    "tailwind-scrollbar": "^3.1.0"
   }
 }

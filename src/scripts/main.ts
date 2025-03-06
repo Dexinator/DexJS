@@ -1,4 +1,5 @@
-import contextCursor from "../libs/context-cursor/contextCursor";
+import contextCursor from "webpack-4-boilerplate/contextCursor";
+
 
 var mq = window.matchMedia("(min-width: 640px)");
 if (mq.matches) {

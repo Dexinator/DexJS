@@ -29,6 +29,9 @@ importers:
       typescript:
         specifier: ^5.5.4
         version: 5.7.3
+      webpack-4-boilerplate:
+        specifier: github:PavelLaptev/context-cursor
+        version: https://codeload.github.com/PavelLaptev/context-cursor/tar.gz/54d113bfc89c3ba27427ca88953c04d852b04a02
     devDependencies:
       daisyui:
         specifier: ^4.12.10
@@ -2084,6 +2087,10 @@ packages:
 
   web-namespaces@2.0.1:
     resolution: {integrity: sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==}
+
+  webpack-4-boilerplate@https://codeload.github.com/PavelLaptev/context-cursor/tar.gz/54d113bfc89c3ba27427ca88953c04d852b04a02:
+    resolution: {tarball: https://codeload.github.com/PavelLaptev/context-cursor/tar.gz/54d113bfc89c3ba27427ca88953c04d852b04a02}
+    version: 1.0.0
 
   which-pm-runs@1.1.0:
     resolution: {integrity: sha512-n1brCuqClxfFfq/Rb0ICg9giSZqCS+pLtccdag6C2HyufBrh3fBOiy9nb6ggRMvWOVH5GrdJskj5iGTZNxd7SA==}
@@ -4538,6 +4545,8 @@ snapshots:
   vscode-uri@3.1.0: {}
 
   web-namespaces@2.0.1: {}
+
+  webpack-4-boilerplate@https://codeload.github.com/PavelLaptev/context-cursor/tar.gz/54d113bfc89c3ba27427ca88953c04d852b04a02: {}
 
   which-pm-runs@1.1.0: {}
 
