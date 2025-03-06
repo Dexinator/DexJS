@@ -1,0 +1,26 @@
+---
+import { SOCIALS } from "../data/socials";
+import Component from "../components/Component.astro";
+---
+
+<div
+aria-label="Social media"
+class="flex group flex-wrap h-40 w-36 flex-col rounded-3xl border-4 border-white p-4 transition-all rotate-0 bg-cyan-50 sm:bg-stone-100 sm:-rotate-2 sm:hover:rotate-0 sm:hover:bg-cyan-50"
+>
+{
+  SOCIALS.map((social) => (
+  <a
+  data-ccursor
+  class="flex flex-col basis-1/2 items-center justify-center rounded-md"
+  href={social.url}
+  target="_blank"
+  rel="noreferrer noopener"
+  aria-label={`${social.name} (opens in a new tab)`}
+  data-umami-event={`${social.name} click`}
+  id={social.name}
+  >
+  <Component component={social.icon} />
+</a>
+))
+}
+</div>

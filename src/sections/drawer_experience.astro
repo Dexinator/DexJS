@@ -1,0 +1,11 @@
+---
+import Drawer from "../components/Drawer.astro";
+import Experience from "../components/Experience.astro";
+import { EXPERIENCE } from "../data/experience";
+---
+
+<Drawer id="experience-drawer" title="Experiencia Laboral" buttonLabel="Ver Currículum" buttonUrl="https://andriy-kuktenko-resume.s3.amazonaws.com/resume.pdf">
+  <ol class="group/list space-y-12">
+    {EXPERIENCE.map((experience) => <Experience {...experience} />)}
+  </ol>
+</Drawer>

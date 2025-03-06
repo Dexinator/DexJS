@@ -1,54 +1,39 @@
 ---
-import Experience from "../components/Experience.astro";
-import { EXPERIENCE } from "../data/experience";
+const { id, title, children, buttonLabel, buttonUrl } = Astro.props;
 import ArrowLeft from "../icons/arrow-left.astro";
 ---
 
-<input id="experience-drawer" type="checkbox" class="drawer-toggle" />
-<div
-  class="drawer-side scrollbar scrollbar-thumb-pink-700 scrollbar-track-pink-300"
->
-  <label
-    for="experience-drawer"
-    aria-label="close sidebar"
-    class="drawer-overlay"></label>
-  <div
-    class="bg-stone-100 min-h-full lg:w-2/4 md:w-full sm:w-full p-10 relative"
-  >
-    <div
-      class="inline-flex absolute top-0 left-0 justify-between px-6 py-4 w-full"
-    >
-      <label
-        for="experience-drawer"
-        aria-label="close sidebar"
-        data-ccursor
-        class="flex items-center justify-center rounded-md group"
-      >
+<input id={id} type="checkbox" class="drawer-toggle" />
+<div class="drawer-side scrollbar scrollbar-thumb-orange-400 scrollbar-track-orange-200">
+  <label for={id} aria-label="close sidebar" class="drawer-overlay"></label>
+  <div class="bg-orange-50 min-h-full lg:w-2/4 md:w-full sm:w-full p-10 relative rounded-lg shadow-lg">
+    
+    <!-- Encabezado del Drawer -->
+    <div class="inline-flex absolute top-0 left-0 justify-between px-6 py-4 w-full">
+      <!-- Botón de Cierre -->
+      <label for={id} aria-label="close sidebar" class="flex items-center justify-center rounded-md group text-black hover:text-orange-500">
         <ArrowLeft />
       </label>
-      <a
-        data-ccursor
-        class="leading-tight font-semibold group p-2 rounded px-3 text-pink-400 sm:text-zinc-600 sm:hover:text-pink-400"
-        aria-label="View Full Résumé"
-        target="_blank"
-        rel="noreferrer noopener"
-        aria-label="View Full Résumé"
-        href="https://andriy-kuktenko-resume.s3.amazonaws.com/resume.pdf"
-        data-umami-event="View Full Résumé click"
-        id="resume"
-      >
-        <span class="font-roboto-condensed font-semibold">View Full Résumé</span
+
+      <!-- Botón opcional (PDF, link, etc.) -->
+      {buttonUrl && (
+        <a
+          class="leading-tight font-semibold group p-2 rounded px-3 text-orange-500 hover:text-orange-600"
+          aria-label={buttonLabel}
+          target="_blank"
+          rel="noreferrer noopener"
+          href={buttonUrl}
         >
-      </a>
+          <span class="font-roboto-condensed font-semibold">{buttonLabel}</span>
+        </a>
+      )}
     </div>
-    <section
-      id="experience"
-      class="mt-10 mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-      aria-label="Work experience"
-    >
-      <ol class="group/list space-y-12">
-        {EXPERIENCE.map((experience) => <Experience {...experience} />)}
-      </ol>
+
+    <!-- Contenido del Drawer -->
+    <section id={id} class="mt-10 mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
+      <h2 class="text-2xl font-bold mb-6 text-black">{title}</h2>
+      <div class="text-black">{children}</div>
     </section>
+
   </div>
 </div>

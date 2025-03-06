@@ -1,15 +1,14 @@
 ---
-import { SOCIALS } from "../data/socials";
 import Layout from "../layouts/Layout.astro";
 import Drawer from "../components/Drawer.astro";
-import Component from "../components/Component.astro";
-
-import IconCursor from "../icons/cursor.astro";
-import IconAt from "../icons/at.astro";
-import IconArrow from "../icons/arrow.astro";
-import Logo from "../icons/logo.astro"
+import Contacto from "../sections/Contacto.astro";
+import Experiencia from "@/sections/experiencia.astro";
+import Logo from "../icons/logo.astro";
+import Mapa from "../sections/mapa.astro";
 
 import Aboutme from "@/sections/aboutme.astro";
+import Slogan from "@/sections/Slogan.astro";
+import DrawerExp from "../sections/drawer_experience.astro"
 ---
 
 <Layout title="Julia Sánchez | Empoderando vidas">
@@ -20,105 +19,18 @@ import Aboutme from "@/sections/aboutme.astro";
   <div class="grid w-full max-w-max grid-cols-2 gap-4 md:grid-cols-4">
     <Aboutme/>
     <Aboutme/>
-</div>
-<div class="flex flex-col items-center justify-center gap-4">
-  <Logo/>
-  
-  <div class="flex w-full items-center justify-center overflow-hidden gap-2" >
-    <p class="font-roboto-condensed font-medium text-2xl lg:text-[2rem] lg:leading-[2rem]">
-      <div class="group relative inline-block">
-        <div
-        class="transition-transform duration-100 group-hover:-translate-y-16"
-        > 
-        <p
-        class="font-roboto-condensed font-medium text-2xl lg:text-[2rem] lg:leading-[2rem]"
-        >
-        Empoderando personas
-      </p>
-    </div>
-    <div
-    class="absolute inset-x-0 top-0 w-max translate-y-16 transition-transform duration-100 group-hover:translate-y-0"
-    >
-    <p
-    class="font-roboto-condensed font-medium text-2xl lg:text-[2rem] lg:leading-[2rem] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
-    >
-    Construyendo futuro.
-  </p>
-</div>
-</div>
-</p>
-</div>
-</div>
-<div class="grid w-full max-w-max grid-cols-2 gap-4 md:grid-cols-4">
-  <div
-  aria-label="Social media"
-  class="flex group flex-wrap h-40 w-36 flex-col rounded-3xl border-4 border-white p-4 transition-all rotate-0 bg-cyan-50 sm:bg-stone-100 sm:-rotate-2 sm:hover:rotate-0 sm:hover:bg-cyan-50"
-  >
-  {
-    SOCIALS.map((social) => (
-    <a
-    data-ccursor
-    class="flex flex-col basis-1/2 items-center justify-center rounded-md"
-    href={social.url}
-    target="_blank"
-    rel="noreferrer noopener"
-    aria-label={`${social.name} (opens in a new tab)`}
-    data-umami-event={`${social.name} click`}
-    id={social.name}
-    >
-    <Component component={social.icon} />
-  </a>
-  ))
-}
-</div>
-<div class="drawer-content col-span-1 row-start-1">
-  <label
-  for="experience-drawer"
-  class="group relative sm:cursor-none overflow-hidden py-4 px-0 flex h-40 w-36 flex-col gap-2 rounded-3xl border-4 border-white transition-all bg-blue-100 rotate-0 sm:-rotate-2 sm:hover:rotate-0 sm:bg-stone-100 sm:hover:bg-blue-100"
-  data-umami-event="Show my work click"
-  id="experience"
-  >
-  <span
-  class="inline-flex sm:cursor-none gap-3 items-center text-3xl font-bold font-serif italic sm:not-italic sm:group-hover:italic text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500 rounded-lg transition-all duration-100"
-  >
-  Show
-  <IconArrow />
-</span>
-<span
-class="font-serif sm:cursor-none italic sm:not-italic sm:group-hover:italic text-3xl font-bold transition-all duration-100 text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500"
->My</span
->
-<span
-class="font-serif sm:cursor-none italic sm:not-italic sm:group-hover:italic text-3xl font-bold transition-all duration-100 text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500"
->Work</span
->
-</label>
-</div>
-<a
-href="https://maps.app.goo.gl/HnAjwjxT5U2fnDET8"
-target="_blank"
-rel="noreferrer"
-aria-label="Puebla, México"
-class="relative sm:cursor-none group overflow-hidden col-span-2 row-start-1 h-40 w-full rounded-3xl border-4 border-white p-4 transition-all rotate-0 sm:rotate-2 sm:hover:rotate-0 hidden sm:block"
->
-<div
-class="absolute inset-0 z-10 bg-[url('/images/Puebla.webp')] bg-center bg-cover bg-no-repeat filter grayscale-0 sm:grayscale sm:group-hover:grayscale-0"
->
-</div>
-<div
-class="absolute z-30 left-1/2 top-1/2 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 animate-marker rounded-full bg-blue-500"
->
-</div>
-<div
-class="absolute left-1/2 top-1/2 z-30 h-[20px] w-[20px] -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-neutral-50 bg-blue-500 shadow-2xl"
->
-</div>
-<span
-class="absolute left-4/2 top-1 z-30 font-semibold font-roboto-condensed text-lg text-white"
->Puebla, México</span
->
-</a>
-</div>
-<Drawer />
+  </div>
+  <div class="flex flex-col items-center justify-center gap-4">
+    <Logo/>
+    
+    <Slogan/>
+  </div>
+  <div class="grid w-full max-w-max grid-cols-2 gap-4 md:grid-cols-4">
+    
+    <Experiencia/>
+    <Mapa/>
+    <Contacto/>
+  </div>
+  <DrawerExp />
 </main>
 </Layout>
