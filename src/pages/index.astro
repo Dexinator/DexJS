@@ -8,7 +8,6 @@ import Mapa from "../sections/mapa.astro";
 
 import Aboutme from "@/sections/aboutme.astro";
 import Slogan from "@/sections/Slogan.astro";
-import DrawerExp from "../sections/drawer_experience.astro"
 
 import Experience from "../components/Experience.astro";
 import { EXPERIENCE } from "../data/experience";
@@ -34,7 +33,7 @@ import { EXPERIENCE } from "../data/experience";
     <Mapa/>
     <Contacto/>
   </div>
-  <Drawer id="experience-drawer" title="Experiencia Laboral" buttonLabel="Ver Currículum" buttonUrl="https://andriy-kuktenko-resume.s3.amazonaws.com/resume.pdf">
+  <Drawer id="experience-drawer" title="Mis proyectos" buttonLabel="Contáctame" buttonUrl="https://wa.me">
     <ol class="group/list space-y-12">
       {EXPERIENCE.map((experience) => <Experience {...experience} />)}
     </ol>
