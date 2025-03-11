@@ -1,27 +1,27 @@
-import IconTwitter from "../icons/twitter.astro";
-import IconGithub from "../icons/github.astro";
-import IconLinkedin from "../icons/linkedin.astro";
-import IconDiscord from "../icons/discord.astro";
+import GMAIL from "../icons/mail.astro";
+import Instagram from "@/icons/instagram.astro";
+import Telephone from "@/icons/telephone.astro";
+import Whatsapp from "@/icons/whatsapp.astro";
 
 export const SOCIALS = [
   {
-    name: "Twitter",
-    url: "https://x.com/AndrewKuktenko",
-    icon: IconTwitter,
+    name: "Mail",
+    url: "https://mail.to",
+    icon: GMAIL,
   },
   {
-    name: "Github",
-    url: "https://github.com/AndrewKuktenko",
-    icon: IconGithub,
+    name: "Instagram",
+    url: "https://instagram.con",
+    icon: Instagram,
   },
   {
-    name: "Linkedin",
-    url: "https://www.linkedin.com/in/andrew-kuktenko/",
-    icon: IconLinkedin,
+    name: "Teléfono",
+    url: "tel:22222222",
+    icon: Telephone,
   },
   {
-    name: "Discord",
-    url: "https://discord.com/users/342345918533599236",
-    icon: IconDiscord,
+    name: "Whatsapp",
+    url: "https://wa.me/",
+    icon: Whatsapp,
   },
 ];
