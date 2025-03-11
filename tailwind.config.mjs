@@ -12,4 +12,7 @@ export default {
     },
   },
   plugins: [daisyui, scrollbar],
+  daisyui: {
+    themes: ["dark"], // Solo se permitirá el tema oscuro
+  },
 };
