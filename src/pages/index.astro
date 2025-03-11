@@ -12,6 +12,7 @@ import Slogan from "@/sections/Slogan.astro";
 import Experience from "../components/Experience.astro";
 import { EXPERIENCE } from "../data/experience";
 import Services from "@/sections/services.astro";
+import ContenidoAM from "@/sections/contentidoam.astro";
 ---
 
 <Layout title="Julia Sánchez | Empoderando vidas">
@@ -39,5 +40,10 @@ import Services from "@/sections/services.astro";
       {EXPERIENCE.map((experience) => <Experience {...experience} />)}
     </ol>
   </Drawer>
+
+  
 </main>
+<Drawer id="about-drawer" title="Hola! Me presento" buttonLabel="Contáctame" buttonUrl="https://wa.me">
+  <ContenidoAM/>
+</Drawer>
 </Layout>
