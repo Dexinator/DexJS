@@ -5,7 +5,7 @@ export const SERVICES: ServiceProps[] = [
     title: "Coaching Individual",
     description:
       "Sesiones personalizadas de coaching enfocadas en el desarrollo personal, autoestima y habilidades emocionales. Acompañamiento para establecer metas y potenciar el crecimiento personal.",
-    audience: "Adolescentes",
+    audience: "Adolescentes y Adultos",
     benefits: [
       "Mejora de autoestima",
       "Claridad en objetivos personales",
@@ -30,8 +30,8 @@ export const SERVICES: ServiceProps[] = [
   {
     title: "Talleres de Alto Impacto",
     description:
-      "Espacios dinámicos para adolescentes y adultos, enfocados en liderazgo, gestión de emociones y toma de decisiones estratégicas.",
-    audience: "Adultos",
+      "Espacios dinámicos para adolescentes, enfocados en liderazgo, gestión de emociones y toma de decisiones estratégicas.",
+    audience: "Adolescentes",
     benefits: [
       "Desarrollo de liderazgo",
       "Estrategias para toma de decisiones",
