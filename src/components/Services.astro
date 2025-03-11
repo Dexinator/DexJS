@@ -1,0 +1,30 @@
+---
+import type { ServiceProps } from "../types/services.props";
+interface Props extends ServiceProps {}
+
+const { title, description, audience, benefits, icon } = Astro.props;
+---
+
+<li class="group relative flex flex-col gap-4 p-6 rounded-lg shadow-lg bg-white hover:bg-orange-50 transition-all text-center">
+    <!-- Icono del servicio -->
+    {icon && (
+      <img src={icon} alt={title} class="w-16 h-16 mx-auto" />
+    )}
+  
+    <!-- Título -->
+    <h3 class="text-lg sm:text-xl font-bold text-orange-600">{title}</h3>
+  
+    <!-- Descripción -->
+    <p class="text-sm sm:text-base text-zinc-700">{description}</p>
+  
+    <!-- Público objetivo -->
+    <span class="text-xs sm:text-sm font-semibold uppercase text-orange-500 block">{audience}</span>
+  
+    <!-- Beneficios -->
+    <ul class="text-xs sm:text-sm text-zinc-600 mt-2 space-y-1">
+      {benefits.map((benefit) => (
+        <li class="before:content-['✓'] before:text-orange-500 before:mr-2">{benefit}</li>
+      ))}
+    </ul>
+  </li>
+  

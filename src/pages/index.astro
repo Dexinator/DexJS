@@ -13,9 +13,12 @@ import Experience from "../components/Experience.astro";
 import { EXPERIENCE } from "../data/experience";
 import Services from "@/sections/services.astro";
 import ContenidoAM from "@/sections/contentidoam.astro";
+import TripleDrawer from "../components/TripleDrawer.astro";
+
 ---
 
 <Layout title="Julia Sánchez | Empoderando vidas">
+  <TripleDrawer>
   <main
   id="content"
   class="flex h-full min-h-screen flex-col items-center justify-center gap-6 py-10 sm:py-10 md:py-4 lg:gap-12 drawer drawer-end"
@@ -35,15 +38,5 @@ import ContenidoAM from "@/sections/contentidoam.astro";
     <Mapa/>
     <Contacto/>
   </div>
-  <Drawer id="experience-drawer" title="Mis proyectos" buttonLabel="Contáctame" buttonUrl="https://wa.me">
-    <ol class="group/list space-y-12">
-      {EXPERIENCE.map((experience) => <Experience {...experience} />)}
-    </ol>
-  </Drawer>
-
-  
-</main>
-<Drawer id="about-drawer" title="Hola! Me presento" buttonLabel="Contáctame" buttonUrl="https://wa.me">
-  <ContenidoAM/>
-</Drawer>
+</TripleDrawer>
 </Layout>

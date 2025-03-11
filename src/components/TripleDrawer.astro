@@ -1,0 +1,50 @@
+---
+import "../styles/global.css";
+import DrawerContents from "../components/DrawerContent.astro"
+import Experience from "../components/Experience.astro";
+import { EXPERIENCE } from "../data/experience";
+import ContenidoAM from "../sections/contentidoam.astro";
+import Service from "../components/Services.astro";
+import { SERVICES } from "../data/services";
+
+---
+
+
+<!-- Tres drawers ocultos hasta clic -->
+<div class="drawer drawer-end">
+  <!-- Drawer izquierdo 1 (externo) -->
+  <input id="aboutme-drawer" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content">
+    <!-- Aquí se anida el segundo drawer (izquierdo 2) -->
+    <div class="drawer drawer-end">
+      <input id="services-drawer" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content">
+        <!-- Anidamos el drawer derecho -->
+        <div class="drawer drawer-end">
+          <input id="experience-drawer" type="checkbox" class="drawer-toggle" />
+          <div class="drawer-content">
+            <!-- Contenido principal con botones para abrir cada drawer -->
+            <div class="flex gap-4 p-4">
+              <slot></slot>
+            </div>
+          </div>
+          <DrawerContents id="experience-drawer" title="Mis proyectos" buttonLabel="Contáctame" buttonUrl="https://wa.me">
+            <ol class="group/list space-y-12">
+              {EXPERIENCE.map((experience) => <Experience {...experience} />)}
+          </ol>
+          </DrawerContents>
+      </div>
+    </div>
+    <DrawerContents id="services-drawer" title="Mis Servicios" buttonLabel="Contáctame" buttonUrl="https://wa.me">
+      <ul class="grid grid-cols-1 gap-6">
+        {SERVICES.map((service) => (
+          <Service {...service} />
+        ))}
+      </ul>
+    </DrawerContents>
+  </div>
+</div>
+<DrawerContents id="aboutme-drawer" title="Hola!" buttonLabel="Contáctame" buttonUrl="https://wa.me">
+  <ContenidoAM/>
+</DrawerContents>
+</div>
