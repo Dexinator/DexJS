@@ -12,7 +12,7 @@ export const SERVICES: ServiceProps[] = [
       "Gestión emocional",
       "Toma de decisiones efectiva"
     ],
-    icon: "/icons/coaching.svg",
+    icon: "/images/services/coaching.webp",
   },
   {
     title: "Coaching Organizacional",
@@ -25,7 +25,7 @@ export const SERVICES: ServiceProps[] = [
       "Mejor ambiente laboral",
       "Desarrollo de liderazgo"
     ],
-    icon: "/icons/organizational.svg",
+    icon: "/images/services/organizational.webp",
   },
   {
     title: "Talleres de Alto Impacto",
@@ -38,6 +38,6 @@ export const SERVICES: ServiceProps[] = [
       "Mejor comunicación interpersonal",
       "Fortalecimiento de habilidades sociales"
     ],
-    icon: "/icons/workshops.svg",
+    icon: "/images/services/workshops.webp",
   },
 ];
