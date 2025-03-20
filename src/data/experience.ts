@@ -2,37 +2,47 @@ import type { ExperienceProps } from "../types/experience.props";
 
 export const EXPERIENCE: ExperienceProps[] = [
   {
-    dates: "Presente",
+    dates: "",
     title: "Coach de Adolescentes",
-    organization: "Independiente",
+    organization: "Consultora",
     description:
       "Brindo orientación y apoyo a adolescentes, ayudándolos a desarrollar habilidades emocionales y sociales. Acompaño procesos de crecimiento personal para fortalecer la autoestima y la resiliencia.",
-    technologies: ["Coaching", "Psicología", "Educación emocional"],
+    technologies: ["Coaching", "Desarrollo humano", "Educación emocional"],
     logo: "/images/coaching.webp",
     category: "Coaching y Educación",
   },
   {
-    dates: "2023",
-    title: "Autora en libro juvenil",
+    dates: "",
+    title: "Gestión de Proyectos",
     organization: "Publicación Independiente",
     description:
       "Escribí un bloque centrado en la autoestima para un libro dirigido a adolescentes, proporcionando herramientas para el desarrollo emocional y la confianza en sí mismos.",
-    technologies: ["Escritura", "Psicología juvenil", "Autoestima"],
+    technologies: ["Escritura", "Desarrollo humano", "Fortalece autoestima"],
     logo: "/images/libro.webp",
     category: "Coaching y Educación",
   },
   {
-    dates: "2022",
+    dates: "",
+    title: "Autora en libro juvenil",
+    organization: "Publicación Independiente",
+    description:
+      "Escribí un bloque centrado en la autoestima para un libro dirigido a adolescentes, proporcionando herramientas para el desarrollo emocional y la confianza en sí mismos.",
+    technologies: ["Escritura", "Desarrollo humano", "Fortalece autoestima"],
+    logo: "/images/libro.webp",
+    category: "Coaching y Educación",
+  },
+  {
+    dates: "",
     title: "Desarrollo de curso sobre Proyecto de Vida",
     organization: "Programa de Capacitación",
     description:
-      "Diseñé un curso de 12 horas sobre la importancia del proyecto de vida en la organización, promoviendo el liderazgo y el impacto positivo en el entorno laboral.",
+      "Diseñé e impartí un curso sobre la importancia del proyecto de vida en la organización, promoviendo el liderazgo y el impacto positivo en el entorno laboral.",
     technologies: ["Educación", "Desarrollo organizacional", "Liderazgo"],
     logo: "/images/curso.webp",
     category: "Coaching y Educación",
   },
   {
-    dates: "2020 - 2021",
+    dates: "",
     title: "Gestión de comunicación en proyectos durante la pandemia",
     organization: "Diversas organizaciones",
     description:
@@ -42,7 +52,7 @@ export const EXPERIENCE: ExperienceProps[] = [
     category: "Comunicación y Proyectos",
   },
   {
-    dates: "Enero 2021",
+    dates: "",
     title: "Capacitación en reuniones efectivas",
     organization: "Consultoría Organizacional",
     description:

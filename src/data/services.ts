@@ -8,7 +8,7 @@ export const SERVICES: ServiceProps[] = [
     audience: "Adolescentes y Adultos",
     benefits: [
       "Mejora de autoestima",
-      "Claridad en objetivos personales",
+      "Logro de objetivos personales",
       "Gestión emocional",
       "Toma de decisiones efectiva"
     ],
@@ -31,7 +31,7 @@ export const SERVICES: ServiceProps[] = [
     title: "Talleres de Alto Impacto",
     description:
       "Espacios dinámicos para adolescentes, enfocados en liderazgo, gestión de emociones y toma de decisiones estratégicas.",
-    audience: "Adolescentes",
+    audience: "Adolescentes y Adultos",
     benefits: [
       "Desarrollo de liderazgo",
       "Estrategias para toma de decisiones",

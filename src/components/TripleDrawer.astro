@@ -6,7 +6,7 @@ import { EXPERIENCE } from "../data/experience";
 import ContenidoAM from "../sections/contentidoam.astro";
 import Service from "../components/Services.astro";
 import { SERVICES } from "../data/services";
-
+import Slider from "../components/Slider.astro"
 ---
 
 
@@ -31,20 +31,22 @@ import { SERVICES } from "../data/services";
           <DrawerContents id="experience-drawer" title="Mis proyectos" buttonLabel="Contáctame" buttonUrl="https://wa.me">
             <ol class="group/list space-y-12">
               {EXPERIENCE.map((experience) => <Experience {...experience} />)}
-          </ol>
+            </ol>
           </DrawerContents>
+        </div>
+      </div>
+      <DrawerContents id="services-drawer" title="Mis Servicios" buttonLabel="Contáctame" buttonUrl="https://wa.me">
+        <Slider/>
+        <ul class="grid grid-cols-1 gap-6">
+          {SERVICES.map((service) => (
+            <Service {...service} />
+            ))}
+          </ul>
+        </DrawerContents>
       </div>
     </div>
-    <DrawerContents id="services-drawer" title="Mis Servicios" buttonLabel="Contáctame" buttonUrl="https://wa.me">
-      <ul class="grid grid-cols-1 gap-6">
-        {SERVICES.map((service) => (
-          <Service {...service} />
-        ))}
-      </ul>
+    <DrawerContents id="aboutme-drawer" title="Hola!" buttonLabel="Contáctame" buttonUrl="https://wa.me">
+      <ContenidoAM/>
     </DrawerContents>
   </div>
-</div>
-<DrawerContents id="aboutme-drawer" title="Hola!" buttonLabel="Contáctame" buttonUrl="https://wa.me">
-  <ContenidoAM/>
-</DrawerContents>
-</div>
+  

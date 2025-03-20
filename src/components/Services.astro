@@ -3,8 +3,8 @@ import type { ServiceProps } from "../types/services.props";
 interface Props extends ServiceProps {}
 
 const { title, description, audience, benefits, icon } = Astro.props;
----
 
+---
 <li class="group relative flex flex-col gap-4 p-6 rounded-lg shadow-lg bg-white hover:bg-orange-50 transition-all text-center">
     <!-- Icono del servicio -->
     {icon && (
