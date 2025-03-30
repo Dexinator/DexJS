@@ -1,6 +1,6 @@
 <h2 align="center">
   <p>Personal website built with Astro</p>
-  <a href="https://www.kuktenko.dev/" target="_blank">www.kuktenko.dev</a>
+  <a href="https://dex-js.vercel.app//" target="_blank">www.dex-js.vercel.app</a>
 </h2>
 
 <div align="center">
